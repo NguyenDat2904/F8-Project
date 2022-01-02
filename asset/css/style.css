@@ -1,0 +1,387 @@
+
+/* Reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    /* Hành vi khi cuộn */
+    scroll-behavior: smooth;
+}
+
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+
+
+/* 
+1. Vị trí
+2. Kích thước (width, heigh)
+3. Màu sắc
+4. Kiểu dáng ( kiểu chữ, hình tròn, vuông,...)
+*/
+/* Phím tắt
+1. Ctr + D : chọn từng phần
+2. Ctr + Shift + L : Chọn all
+3. Alt + Shift + -> : Chọn phần giống nhau
+*/
+
+/* Common - Những phần giống nhau */
+
+.clear{
+    clear: both;
+}
+.text-white{
+    color: #fff !important;
+}
+
+.row{
+
+    margin-left: -8px;
+    margin-right: -8px
+
+}
+
+.col{
+    /* Dàn hàng */
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+.col-3{
+
+    width: 33.33333%;
+}
+.col-2{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+.mt-8{
+    margin-top: 8px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+.btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+
+}
+.btn:hover{
+    color: #000;
+    background-color: #ccc;
+    
+}
+.rigth{
+    float: right;
+}
+
+/* Main */
+
+#main{
+
+}
+
+#header{
+    height: 46.5px;
+    background-color: #000;
+    position: fixed; /* cho nav bám dính trên thanh top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+} 
+#nav{
+    display: inline-block;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+#nav >  li > a{
+    color: #fff ;
+    text-transform: uppercase;
+
+
+}
+
+
+#nav  li a{
+    text-decoration: none;
+    line-height: 46.5px;
+    display: inline-block;
+    padding: 0 24px;
+}
+
+
+#nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav{
+    list-style: none;
+    display: none;
+    min-width: 160px;
+    top: 100%;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+#nav .subnav li:hover{
+    color: #000;
+    background-color: #ccc;
+}
+#nav .subnav a{
+    color: #000;
+    padding: 0 16px;
+    line-height: 38px;
+
+
+}
+#nav .nav-arrow-down{
+    font-size: 12px;
+}
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor: pointer;  /* thay đổi con trỏ chuột */
+}
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%; /* tỉ lệ ảnh = 50% chiều ngang của chính nó */
+    background: url('../img/chicago.jpg') top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slider .text-conten{
+    position: absolute;
+    bottom:  47px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading{
+    font-size: 24px;
+    /* giảm độ dày chữ */
+    font-weight: 500;
+}
+#slider .text-descriptio{
+    font-size: 15px;
+    margin-top: 25px;
+
+}
+
+#content{
+
+}
+#content .conten-section{
+    width: 800px;
+    padding: 64px 0 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+#content .section-subheading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    /* chu nghieng */
+    font-style: italic; 
+    /* mo font chu */
+    opacity: 0.6;
+}
+#content .about{
+    margin-top: 25px;
+    font-size: 15px;
+    /* can deu chu */
+    text-align: justify;
+    /* khoang cach chu */
+    line-height: 1.4;
+}
+#content .member-list{
+    margin-top: 48px;
+    text-align: center;
+}
+
+#content .member-name{
+    font-size: 15px;
+    
+}
+#content .member-img{
+    width: 154px;
+    margin-top: 15px;
+    /* Bo góc ảnh */
+    border-radius: 4px;
+}
+.tour-section{
+    background-color: #000;
+}
+.ticket{
+    margin-top: 40px;
+    background-color: #fff;
+}
+
+.ticket li{
+    /* bỏ dấu tròn của list */
+    list-style: none;
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    margin-left: 16px;
+
+}
+
+.ticket .quatity{
+    margin-right: 16px;
+    background-color: #000;
+    color: #fff;
+
+    /* chuyển sang bên phải */
+    float: right;
+
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-top: -3px;
+
+}
+.place-list{
+    margin-top: 32px; 
+}
+
+.place-img:hover{
+    opacity: 0.7;
+}
+.place-img{
+    width: 100%;
+    display: block;
+
+}
+.place-body{
+    background-color: #fff;
+    font-size: 15px;
+    padding-left: 12px;
+}
+.heading{
+    font-size: 15px;
+    font-style: bold;
+    padding-top: 15px;
+}
+.place-time{
+    color: #757575;
+    /* khoảng cách các chữ */
+    line-height: 1.4;
+    margin-top: 15px;
+
+}
+.place-desce{
+    margin-top: 15px;
+
+}
+
+/* Contact */
+.contact-section{
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+.contact-form{
+    padding: 32px;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i{
+    width: 32px;
+    display: inline-block;
+    
+}
+.contact-text{
+    font-size: 15px;
+}
+.form-cotrol{
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.form-submit:hover{
+    background-color: #ccc;
+    color: #000;
+}
+/* Map */
+.map-font{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(50%) ;
+    
+}
+#footer{
+    padding-top: 64px;
+    padding-bottom: 64px;   
+    text-align: center;
+}
+
+#footer .infor{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    opacity: 0.6;
+    /* text-decoration: none; */
+    color: #000;
+}
+
+#footer .social{
+    font-size: 24px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .social:hover{
+    color: #ccc;
+}
+
+
